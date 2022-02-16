@@ -131,7 +131,7 @@ namespace CodingChallenge
         private static int FindMax3(List<int> round3)
         {
             var group = round3.GroupBy(gr => gr);
-            var totalMax = group.Max(max => max.Sum(sum => sum));
+            var totalMax = group.Max(max => max.Sum());
             return totalMax;
         }
         private static void PrintMax(List<int> round)
