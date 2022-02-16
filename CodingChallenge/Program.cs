@@ -87,19 +87,14 @@ namespace CodingChallenge
                 {
                     currentTotalScore = item;
                     currentScore = item;
-
-                    if (currentTotalScore > totalMax)
-                    {
-                        totalMax = currentTotalScore;
-                    }
                 }
-                else if (item == currentScore)
+                else
                 {
                     currentTotalScore += item;
-                    if (currentTotalScore > totalMax)
-                    {
-                        totalMax = currentTotalScore;
-                    }
+                }
+                if (currentTotalScore > totalMax)
+                {
+                    totalMax = currentTotalScore;
                 }
             }
 
