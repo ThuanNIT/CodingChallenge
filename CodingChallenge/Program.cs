@@ -133,7 +133,12 @@ namespace CodingChallenge
             }
             return totalMax;
         }
-
+        private static int FindMax3(List<int> round3)
+        {
+            var group = round3.GroupBy(gr => gr);
+            var totalMax = group.Max(max => max.Sum(sum => sum));
+            return totalMax;
+        }
         private static void PrintMax(List<int> round)
         {
             Console.Write($"[{string.Join(", ", round)}]");
